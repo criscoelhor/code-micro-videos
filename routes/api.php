@@ -18,12 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'Api'], function () {
-    $exceptCreateAmdEdit = [
-        'except' => ['create', 'edit']
-    ];
-
-    Route::resource('categories','CategoryController', $exceptCreateAmdEdit);
-    Route::resource('genres','GenreController', $exceptCreateAmdEdit);
+    Route::resource('categories','CategoryController', ['except' => ['create','edit']]);
+    Route::resource('genres','GenreController', ['except' => ['create','edit']]);
 });
 
 
