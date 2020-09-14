@@ -78,6 +78,5 @@ class GenreTest extends TestCase
 
         $genre->restore();
         $this->assertNotNull(Genre::find($genre->id));
-    
     }
 }
