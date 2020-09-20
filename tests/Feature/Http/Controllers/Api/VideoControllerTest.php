@@ -29,8 +29,6 @@ class VideoControllerTest extends TestCase
             'year_launched' => 2010,
             'rating' => 'L',
             'duration' => 90,
-            'categories_id' => Category::all()[1]->id,
-            'genres_id' => Genre::all()[1]->id,
         ];
     }
 
@@ -124,40 +122,40 @@ class VideoControllerTest extends TestCase
         $this->assertInvalidationInUpdateAction($data, 'exists');
     }
 
-    public function testSave()
-    {
-        $data = [
-            [
-                'send_data' => $this->sendData, 
-                'test_data' => $this->sendData + ['opened' => false]
-            ],
-            [
-                'send_data' => $this->sendData + ['opened' => true], 
-                'test_data' => $this->sendData + ['opened' => true]
-            ],
-            [
-                'send_data' => $this->sendData + ['rating' => Video::RATING_LIST[1]], 
-                'test_data' => $this->sendData + ['rating' => Video::RATING_LIST[1]]
-            ]
-        ];
+    // public function testSave()
+    // {
+    //     $data = [
+    //         [
+    //             'send_data' => $this->sendData, 
+    //             'test_data' => $this->sendData + ['opened' => false]
+    //         ],
+    //         [
+    //             'send_data' => $this->sendData + ['opened' => true], 
+    //             'test_data' => $this->sendData + ['opened' => true]
+    //         ],
+    //         [
+    //             'send_data' => $this->sendData + ['rating' => Video::RATING_LIST[1]], 
+    //             'test_data' => $this->sendData + ['rating' => Video::RATING_LIST[1]]
+    //         ]
+    //     ];
 
-        foreach ($data as $key => $value) {
-            $response = $this->assertStore(
-                $value['send_data'], 
-                $value['test_data'] + ['deleted_at' => null]
-            );
-            $response->assertJsonStructure([
-                'created_at', 'updated_at'
-            ]);
-            $response = $this->assertUpdate(
-                $value['send_data'], 
-                $value['test_data'] + ['deleted_at' => null]
-            );
-            $response->assertJsonStructure([
-                'created_at', 'updated_at'
-            ]);
-        }
-    }
+    //     foreach ($data as $key => $value) {
+    //         $response = $this->assertStore(
+    //             $value['send_data'], 
+    //             $value['test_data'] + ['deleted_at' => null]
+    //         );
+    //         $response->assertJsonStructure([
+    //             'created_at', 'updated_at'
+    //         ]);
+    //         $response = $this->assertUpdate(
+    //             $value['send_data'], 
+    //             $value['test_data'] + ['deleted_at' => null]
+    //         );
+    //         $response->assertJsonStructure([
+    //             'created_at', 'updated_at'
+    //         ]);
+    //     }
+    // }
 
     public function testShow()
     {
