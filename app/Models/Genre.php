@@ -15,5 +15,11 @@ class Genre extends Model
         'id' => 'string',
         'is_active' => 'boolean'
     ];
+
     public $incrementing = false;
+
+    public function videos()
+    {
+        return $this->belongsToMany(Video::class);
+    }
 }
