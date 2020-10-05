@@ -22,4 +22,9 @@ class Genre extends Model
     {
         return $this->belongsToMany(Video::class);
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }
