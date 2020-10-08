@@ -183,7 +183,6 @@ class VideoControllerCrudTest extends BaseVideoControllerTestCase
                 $value['send_data']['genres_id'][0]
             );
         }
-
     }
 
     protected function assertHasCategory($videoId, $categoryId)
