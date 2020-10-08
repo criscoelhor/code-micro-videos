@@ -5,8 +5,8 @@ steps:
   args:
       - kms
       - decrypt
-      - --ciphertext-file=.storage/credentials/google/service-account-testing.json.enc
-      - --plaintext-file=storage/credentials/google/service-account-testing.json
+      - --ciphertext-file=.storage/credentials/google/service-account-storage.json.enc
+      - --plaintext-file=storage/credentials/google/service-account-storage.json
       - --location=global
       - --keyring=testing-coelhotest
       - --key=service-account
