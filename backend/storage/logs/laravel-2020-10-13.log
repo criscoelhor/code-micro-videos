@@ -1,0 +1,12 @@
+[2020-10-13 17:55:28] testing.ERROR: Class App\Http\Controllers\Api\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Http\Controllers\Api\BasicCrudController::resourceCollection) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class App\\Http\\Controllers\\Api\\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Http\\Controllers\\Api\\BasicCrudController::resourceCollection) at /workspace/app/Http/Controllers/Api/CategoryController.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2020-10-13 17:55:28] testing.ERROR: Class App\Http\Controllers\Api\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Http\Controllers\Api\BasicCrudController::resourceCollection) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class App\\Http\\Controllers\\Api\\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Http\\Controllers\\Api\\BasicCrudController::resourceCollection) at /workspace/app/Http/Controllers/Api/CategoryController.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2020-10-13 17:55:28] testing.ERROR: Class App\Http\Controllers\Api\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Http\Controllers\Api\BasicCrudController::resourceCollection) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class App\\Http\\Controllers\\Api\\CategoryController contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Http\\Controllers\\Api\\BasicCrudController::resourceCollection) at /workspace/app/Http/Controllers/Api/CategoryController.php:10)
+[stacktrace]
+#0 {main}
+"} 
